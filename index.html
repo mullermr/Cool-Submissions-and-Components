@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>CodePen - Cool Submissions and Components </title>
+  
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<div id = "app">
+  <input type="text" v-model = "name" placeholder = "Name"/>
+  <br>
+  <input type="text" v-model = "email" placeholder = "Email"/>
+  <div>
+    {{nameMess}}
+    <br>
+    {{emailMess}}
+  </div>
+  <div>
+    {{submission}}
+  </div>
+  <codenames v-for = "item in list" v-bind:names = "item.name" v-bind:codename = "item.codename"></codenames>
+</div>
+<!-- partial -->
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/2.6.11/vue.min.js'></script><script  src="./script.js"></script>
+
+</body>
+</html>
